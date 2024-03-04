@@ -1,0 +1,82 @@
+p {
+    font-family: 'Livvic', Times, monospace;
+}
+
+body {
+    font-family: 'Livvic', Times, monospace;
+}
+
+:root {
+    --color1: rgba(163, 172, 255, 1);
+    --color2: rgba(202, 155, 206, 1);
+    --color3: rgba(255, 236, 69, 1);
+    --color1_light: rgba(163, 172, 255, 0.1);
+}
+
+header {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.5mm solid;
+}
+
+.landing-text {
+    align-content: center;
+    text-align: center;
+}
+
+.input-box {
+    padding: 10px;
+    border: 2px solid var(--color1_light);
+    border-radius: 20px;
+    font-size: 16px;
+    outline: none;
+    box-shadow: 0 0 10px var(--color1);
+    resize: none;
+    background-color: var(--color1_light);
+  }
+
+.nav-button {
+    background-color: white;
+    font-family: 'Livvic', Times;
+    font-size: medium;
+    border: none;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+
+.nav-button-highlight {
+    background-color: var(--color1);
+    font-family: 'Livvic', Times;
+    font-size: medium;
+    border: none;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+
+.nav-button-highlight:hover {
+    color: white
+}
+
+.results {
+    display: flex;
+    padding: 3%;
+    text-align: center;
+    min-height: 200px
+}
+
+.column.left {
+    width: 30%;
+    background-color: var(--color2);
+}
+.column.right {
+    width: 70%;
+    background-color: var(--color3);
+}
