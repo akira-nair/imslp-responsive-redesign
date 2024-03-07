@@ -33,8 +33,10 @@ u {
 }
 
 :root {
-    --color1: rgba(163, 172, 255, 1);
-    --color2: rgba(202, 155, 206, 1);
+    /* --color1: rgba(163, 172, 255, 1); */
+    --color1: rgb(88, 95, 162);
+    /* --color2: rgba(202, 155, 206, 1); */
+    --color2: rgb(124, 83, 128);
     --color3: rgba(255, 236, 69, 0.8);
     --color1_light: rgba(163, 172, 255, 0.1);
 }
@@ -79,6 +81,7 @@ header {
 
 .nav-button-highlight {
     background-color: var(--color1);
+    color:white;
     font-family: 'Livvic', Times;
     font-size: medium;
     border: none;
@@ -90,7 +93,7 @@ header {
 }
 
 .nav-button-highlight:hover {
-    color: white
+    color: var(--color3)
 }
 
 .nav-bar{
