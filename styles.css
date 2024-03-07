@@ -1,15 +1,41 @@
 p {
-    font-family: 'Livvic', Times, monospace;
+    font-weight: 100;
 }
 
 body {
     font-family: 'Livvic', Times, monospace;
+    font-weight: normal;
+}
+
+h1 {
+    font-family: 'Livvic', Times, monospace;
+    font-weight: normal;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+h3 {
+    font-weight: normal;
+}
+
+h4 {
+    font-weight: bold
+}
+
+h5 {
+    font-weight: 100;
+}
+
+u {
+    text-decoration-color: white;
 }
 
 :root {
     --color1: rgba(163, 172, 255, 1);
     --color2: rgba(202, 155, 206, 1);
-    --color3: rgba(255, 236, 69, 1);
+    --color3: rgba(255, 236, 69, 0.8);
     --color1_light: rgba(163, 172, 255, 0.1);
 }
 
@@ -29,13 +55,15 @@ header {
 .input-box {
     padding: 10px;
     border: 2px solid var(--color1_light);
+    width: 50%;
+    height: 2%;
     border-radius: 20px;
     font-size: 16px;
     outline: none;
     box-shadow: 0 0 10px var(--color1);
     resize: none;
     background-color: var(--color1_light);
-  }
+}
 
 .nav-button {
     background-color: white;
@@ -65,9 +93,15 @@ header {
     color: white
 }
 
+.nav-bar{
+    display: flex;
+    gap: 10px;
+}
+
 .results {
     display: flex;
     padding: 3%;
+    justify-content: center;
     text-align: center;
     min-height: 200px
 }
@@ -75,8 +109,169 @@ header {
 .column.left {
     width: 30%;
     background-color: var(--color2);
+    padding: 20px;
+    display: block;
 }
+
 .column.right {
     width: 70%;
     background-color: var(--color3);
+    display: block;
+    padding: 20px;
+
+}
+
+.white-text {
+    color: white;
+}
+
+.filter {
+    display: flex;
+    justify-content: center;
+    padding: 0%;
+    max-height: 50px;
+}
+
+.filter-group {
+    justify-content: flex-start;
+    display: flex;
+}
+
+.result-box {
+    background-color: var(--color1);
+    width: 80%;
+    max-height: 25%;
+    margin: auto;
+    margin-top: 30px;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    align-self: center;
+}
+
+.result-description {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
+
+.search-area {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 2%
+}
+
+.sort-section {
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(2, 1fr); 
+    gap: 5px;
+}
+
+.sort-button {
+    display: none;
+}
+
+.left-align-sort {
+    justify-content: left;
+    align-content: left;
+    align-self: left
+}
+
+.right-align-sort {
+    justify-content: right;
+    align-content: right;
+    align-self: right
+}
+
+.download {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.dropdown {
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+    border: none;
+    border-radius: 5%;
+}
+
+.icon-center{
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+    padding: 10px;
+}
+
+.nav-collapse{
+    display:none
+}
+
+
+/* Tablet */
+
+@media screen and (max-width: 1000px) {
+    .sort-section {
+        display: none
+    }
+
+    .sort-button {
+        display: inline
+    }
+}
+
+/* Mobile */
+
+@media screen and (max-width: 800px) {
+
+    .results {
+        display: grid;
+        flex-direction: column;
+        align-items: baseline;
+        text-align: center;
+    }
+    .column.left {
+        min-width: 80%;
+        max-width: 100%;
+        background-color: var(--color2);
+        /* padding: 20px; */
+        margin: 0 auto;
+    }
+    
+    .column.right {
+        min-width: 80%;
+        max-width: 100%;
+        background-color: var(--color3);
+        /* padding: 20px; */
+        /* display: none; */
+        margin: auto;
+    }
+
+    .nav-bar {
+        display: none;
+    }
+
+    .sort-section {
+        display: none
+    }
+
+    
+    .input-box {
+        width: 80%
+    }
+
+    .result-description {
+        flex-direction: column;
+    }
+    .nav-collapse {
+        display: inline;
+    }
 }
